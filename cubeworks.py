@@ -41,10 +41,10 @@ def newScramble(movNum):
   
   act = movNum-1
   while act>=0:
-    if scramblesArr[act] == scramblesArr[act-1] and act > 1 and scramblesArr[act] < 7:
+    if scramblesArr[act] == scramblesArr[act-1] and act > 1 and scramblesArr[act] < 6:
       scrambleStr[act-1] = str(2) + (movesList[scramblesArr[act]])
       act -= 1
-    elif scramblesArr[act] == scramblesArr[act-1] and act > 1 and scramblesArr[act] >= 7:
+    elif scramblesArr[act] == scramblesArr[act-1] and act > 1 and scramblesArr[act] >= 6:
       scrambleStr[act-1] = str(2) + (movesList[scramblesArr[act]-6])
       act -= 1
     elif (scramblesArr[act] == scramblesArr[act-1]-6) or ((scramblesArr[act] == scramblesArr[act-1]+6)) and (act > 1):
